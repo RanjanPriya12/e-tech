@@ -104,7 +104,7 @@ const updatePost = async(req,res)=>{
             runValidators: true,
             useFindAndModify: false,
           });
-          await user.save();
+          await post.save();
           return res
             .status(200)
             .send({ success: true, message: "Post data updated successfully." });
